@@ -8,10 +8,12 @@ Biên dịch chương trình:
 ``
 make
 ``
+
 Kiểm tra mã nguồn:
 ``
 make cppcheck
 ``
+
 Xóa kết quả biên dịch:
 ``
 make clean
