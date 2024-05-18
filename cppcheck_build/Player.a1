@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="690311007">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Player::age&apos; is not initialized in the constructor." verbose="Member variable &apos;Player::age&apos; is not initialized in the constructor." cwe="398" file0="src/Player.cpp">
+            <location file="src/Player.cpp" line="3" column="9"/>
+            <symbol>Player::age</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Player::age&apos; is not initialized in the constructor." verbose="Member variable &apos;Player::age&apos; is not initialized in the constructor." cwe="398" file0="src/Player.cpp">
+            <location file="src/Player.cpp" line="6" column="9"/>
+            <symbol>Player::age</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Player&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Player&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="src/Player.cpp">
+            <location file="include/Player.h" line="9" column="5"/>
+            <symbol>Player</symbol>
+        </error>
+  <FileInfo check="Class">
+<class name="Player" file="include/Player.h" line="6" col="1" hash="7065029197328035229"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="GetName" lineNumber="9"/>
+    <functiondecl functionName="GetScore" lineNumber="13"/>
+    <functiondecl functionName="IncreaseScore" lineNumber="17"/>
+    <functioncall functionName="Player"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="score"/>
+  </FileInfo>
+</analyzerinfo>
