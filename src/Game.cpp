@@ -38,10 +38,6 @@ void Game::Run() {
 
         if (choice == 'n' || choice == 'N') {
             continuePlaying = false;
-
-            // insert memory bug
-            Player* pPlayer = &player;
-            delete pPlayer;
             std::cout << "Final score: " << player.GetScore() << "\n";
         }
     }
@@ -65,7 +61,7 @@ void Game::PlayRound() {
 
     if (IsGuessCorrect(guess)) {
         DisplayResult(true, false);
-        player.IncreaseScore();
+        player.IncreaseScore(attemptsLeft);
         attemptsLeft = 0;  
     } else {
         attemptsLeft--;
@@ -78,6 +74,7 @@ void Game::PlayRound() {
             std::cout << "Attempts left: " << attemptsLeft << std::endl;
         } else {
             std::cout << "Sorry, you ran out of attempts!" << std::endl;
+            player.DecreaseScore();
         }
     }
 }
@@ -86,7 +83,7 @@ bool Game::IsGuessCorrect(int guess) const {
     return guess == secretNumber;
 }
 
-void Game::DisplayResult(bool isCorrect, bool isGreater) const {
+void Game::DisplayResult(bool isCorrect, bool isGreater) {
     if (isCorrect) {
         std::cout << "Congratulations, " << player.GetName() << "! You guessed the correct number." << std::endl;
     } else {
@@ -99,6 +96,6 @@ void Game::DisplayResult(bool isCorrect, bool isGreater) const {
     }
 }
 
-void Game::DisplayScore() const {
-    std::cout << player.GetName() << "'s score: " << player.GetScore() << std::endl;
+void Game::DisplayScore() {
+    std::cout << player.GetName() << "'s score: " << player.GetLastScore() << std::endl;
 }

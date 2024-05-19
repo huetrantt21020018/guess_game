@@ -1,8 +1,0 @@
-Game
-Run call:[DisplayScore,GetScore,Initialize,PlayRound,Player] noreturn:[PlayRound]
-Initialize call:[rand,srand,time]
-GetPlayerGuess
-PlayRound call:[DisplayResult,GetPlayerGuess,IncreaseScore,IsGuessCorrect] noreturn:[DisplayResult]
-IsGuessCorrect
-DisplayResult call:[GetName]
-DisplayScore call:[GetName,GetScore]

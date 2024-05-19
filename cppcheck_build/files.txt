@@ -1,3 +1,0 @@
-Game.a1::src/Game.cpp
-Player.a1::src/Player.cpp
-main.a1::src/main.cpp

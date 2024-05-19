@@ -14,6 +14,18 @@ int Player::GetScore() const {
     return score;
 }
 
-void Player::IncreaseScore() {
+
+int Player::GetLastScore() {
+    // Out of bounds access
+    return results[results.size()];
+}
+
+void Player::IncreaseScore(int value) {
     score++;
+    results.push_back(value);
+}
+
+void Player::DecreaseScore() {
+    score--;
+    results.push_back(-1);
 }

@@ -18,8 +18,8 @@ private:
     int GetPlayerGuess() const;
     void PlayRound();
     bool IsGuessCorrect(int guess) const;
-    void DisplayResult(bool isCorrect, bool isGreater) const;
-    void DisplayScore() const;
+    void DisplayResult(bool isCorrect, bool isGreater);
+    void DisplayScore();
 };
 
 #endif // GAME_H

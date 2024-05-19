@@ -28,6 +28,7 @@ cppcheck:
 	mkdir -p $(BUILD_DIR)
 	$(CPPCHECK) --enable=all --xml --xml-version=2 --cppcheck-build-dir=$(BUILD_DIR) $(SRC) 2> $(BUILD_DIR)/cppcheck.xml
 	$(CPPCHECK) --enable=all --cppcheck-build-dir=$(BUILD_DIR) $(SRC)
+	cppcheck-htmlreport --title="guess_game" --file=$(BUILD_DIR)/cppcheck.xml --report-dir=$(BUILD_DIR)/cppcheck.html
 
 clean:
 	rm -rf $(OBJDIR) $(EXECUTABLE) $(DEP) $(BUILD_DIR)
