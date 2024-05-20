@@ -5,11 +5,15 @@
 
 ## Cách sử dụng
 Clone mã nguồn về máy:
+
 ``
 git clone https://github.com/huetrantt21020018/guess_game.git
+
 git checkout master
 ``
+
 Biên dịch chương trình:
+
 ``
 make
 ``
