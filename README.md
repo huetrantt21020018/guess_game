@@ -8,7 +8,9 @@ Clone mã nguồn về máy:
 
 ``
 git clone https://github.com/huetrantt21020018/guess_game.git
+``
 
+``
 git checkout master
 ``
 
@@ -19,11 +21,13 @@ make
 ``
 
 Kiểm tra mã nguồn:
+
 ``
 make cppcheck
 ``
 
 Xóa kết quả biên dịch:
+
 ``
 make clean
 ``
