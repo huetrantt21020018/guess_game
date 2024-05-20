@@ -14,10 +14,16 @@ git clone https://github.com/huetrantt21020018/guess_game.git
 git checkout master
 ``
 
-Biên dịch chương trình:
+Biên dịch mã nguồn:
 
 ``
 make
+``
+
+Thực thi chương trình:
+
+``
+./game
 ``
 
 Kiểm tra mã nguồn:
