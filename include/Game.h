@@ -5,7 +5,7 @@
 
 class Game {
 public:
-    Game(); // Hàm tạo mặc định
+    Game(); 
     void Run();
     
 private:
