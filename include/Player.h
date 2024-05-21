@@ -7,7 +7,7 @@
 class Player {
 public:
     Player();
-    Player(const std::string& name);
+    explicit Player(const std::string& name);
     std::string GetName() const;
     int GetScore() const;
     int GetLastScore();
@@ -17,7 +17,7 @@ public:
 private:
     std::string name;
     int score;
-    int age;
+    int age; // Unused variable
     std::vector<int> results;
 };
 

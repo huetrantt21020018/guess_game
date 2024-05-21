@@ -14,14 +14,14 @@ int Player::GetScore() const {
     return score;
 }
 
-
+// Unused function
 int Player::GetLastScore() {
     // Out of bounds access
     return results[results.size()];
 }
 
 void Player::IncreaseScore(int value) {
-    score++;
+    score += value;
     results.push_back(value);
 }
 

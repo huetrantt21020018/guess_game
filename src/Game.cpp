@@ -45,13 +45,13 @@ void Game::Run() {
 
 void Game::Initialize() {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
-    secretNumber = std::rand() % 100 + 1;  
+    secretNumber = std::rand() % 20 + 1;  
     attemptsLeft = 9;
 }
 
 int Game::GetPlayerGuess() const {
     int guess;
-    std::cout << "Enter your guess (1-100): ";
+    std::cout << "Enter your guess (1-20): ";
     std::cin >> guess;
     return guess;
 }
@@ -97,5 +97,5 @@ void Game::DisplayResult(bool isCorrect, bool isGreater) {
 }
 
 void Game::DisplayScore() {
-    std::cout << player.GetName() << "'s score: " << player.GetLastScore() << std::endl;
+    std::cout << player.GetName() << "'s score: " << player.GetScore() << std::endl;
 }
